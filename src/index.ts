@@ -14,6 +14,7 @@ import { logger } from './utils/logger';
 import authRoutes from './route/auth.routes';
 import levelRoutes from './route/level.routes';
 import categoryRoutes from './route/category.routes';
+import questionRoutes from './route/question.routes';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -37,6 +38,8 @@ app.use(cors())
 app.use('/api/auth', authRoutes);
 app.use('/api/level', levelRoutes);
 app.use('/api/category', categoryRoutes);
+app.use('/api/question', questionRoutes);
+
 createConnection().then(async () => {
 
     http.listen(PORT, () => {
