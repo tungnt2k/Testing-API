@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "testingdev api",
+      "script": "./build/src/index.js",
+      "watch": false,
+      "ignore_watch": [
+        "node_modules",
+        "logs"
+      ]
+    }
+  ]
+}
