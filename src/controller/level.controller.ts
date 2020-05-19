@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { error, success, done } from '../utils/res';
-import { getAllLevel, addLevel, updateLevel, deleteLevel } from '../model/Level';
-import { levelSchema } from '../joiSchema/levelSchema';
+import { getAllLevel, addLevel, updateLevel, deleteLevel } from '../model/level.model';
+import { levelSchema } from '../joiSchema/level.schema';
 import { logger } from '../utils/logger';
 
 export default class LevelController {

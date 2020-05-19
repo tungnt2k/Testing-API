@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { error, success, done } from '../utils/res';
-import { getAllCategories, addCategory, updateCategory, deleteCategory } from '../model/Category';
+import { getAllCategories, addCategory, updateCategory, deleteCategory } from '../model/category.model';
 import { logger } from '../utils/logger';
-import { categorySchema } from '../joiSchema/categorySchema';
+import { categorySchema } from '../joiSchema/category.schema';
 
 export default class CategoryController {
 

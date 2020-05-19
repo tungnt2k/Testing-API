@@ -1,8 +1,8 @@
 import { getRepository } from 'typeorm';
 import { Test } from '../entity/Test';
-import { getTestQuestionsByTestId, updateAnswer, updateAnswers } from '../model/TestQuestion';
+import { getTestQuestionsByTestId, updateAnswer, updateAnswers } from './testQuestion.model';
 import { TotalQuestion, TimeLimit } from '../config/TestConfig';
-import { getQuestion } from './Question';
+import { getQuestion } from './question.model';
 import { TestQuestion } from '../entity/TestQuestion';
 
 export const getAllTests = async () => {

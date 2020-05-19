@@ -8,7 +8,7 @@ import { getRepository } from 'typeorm';
 import { User } from './entity/User';
 import { hashSync, genSaltSync } from 'bcryptjs';
 
-import { httpLogger } from './middleware/httpLogger';
+import { httpLogger } from './middleware/logger.middleware';
 import { logger } from './utils/logger';
 
 import authRoutes from './route/auth.routes';

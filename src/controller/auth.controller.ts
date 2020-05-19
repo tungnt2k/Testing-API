@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { error, success, done } from '../utils/res';
-import { login } from '../model/User';
+import { login } from '../model/user.model';
 import { logger } from '../utils/logger';
-import { authSchema } from '../joiSchema/authSchema';
+import { authSchema } from '../joiSchema/auth.schema';
 
 export default class CategoryController {
 

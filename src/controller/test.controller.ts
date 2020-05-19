@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { error, success, done } from '../utils/res';
-import { getAllTests, delTest, createTest, checkResult, getTestDetail } from '../model/Test';
-import { createTestSchema, submitTestSchema } from '../joiSchema/testSchema';
-import { genQuestion, getTestQuestionsByTestId } from '../model/TestQuestion';
+import { getAllTests, delTest, createTest, checkResult, getTestDetail } from '../model/test.model';
+import { createTestSchema, submitTestSchema } from '../joiSchema/test.schema';
+import { genQuestion, getTestQuestionsByTestId } from '../model/testQuestion.model';
 import { logger } from '../utils/logger';
 
 export default class {

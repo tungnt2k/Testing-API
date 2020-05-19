@@ -2,7 +2,7 @@ import { getRepository } from 'typeorm';
 import { Question } from '../entity/Question';
 import { TestQuestion } from '../entity/TestQuestion';
 import { Test } from '../entity/Test';
-import { getToMix } from '../model/Question';
+import { getToMix } from './question.model';
 import { TotalQuestion } from '../config/TestConfig';
 
 export const genQuestion = async (testDetail: Test) => {

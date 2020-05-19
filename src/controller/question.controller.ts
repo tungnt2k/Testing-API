@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { done, success, error } from '../utils/res';
-import { getAll, addQuestion, updateQuestion, deleteQuestion, getByLevelId, getByCateId } from '../model/Question';
+import { getAll, addQuestion, updateQuestion, deleteQuestion, getByLevelId, getByCateId } from '../model/question.model';
 import { Question } from '../entity/Question';
-import { questionSchema, updateQuestionSchema } from '../joiSchema/questionSchema';
+import { questionSchema, updateQuestionSchema } from '../joiSchema/question.schema';
 import { logger } from '../utils/logger';
 
 export default class {
