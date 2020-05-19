@@ -4,9 +4,14 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors'
 
+import { getRepository } from 'typeorm';
+import { User } from './entity/User';
+import { hashSync, genSaltSync } from 'bcryptjs';
 
 import { httpLogger } from './middleware/httpLogger';
 import { logger } from './utils/logger';
+
+import authRoutes from './route/auth.routes';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,7 +22,17 @@ app.use(bodyParser.json());
 app.use(httpLogger);
 app.use(cors())
 
+// Create admin
+// const repos = getRepository(User);
+// const adminUser = new User();
+// const salt = genSaltSync(10)
+// adminUser.username = 'admin';
+// adminUser.password = hashSync('amelajsc123', salt);
+// await repos.save(adminUser);
 
+
+// Define routes
+app.use('/api/auth', authRoutes)
 
 createConnection().then(async () => {
 
